@@ -128,10 +128,9 @@ class _DashboardState extends State<Dashboard> {
                      itemCount: items!.length,
                      itemBuilder: (context,int index){
                        return Slidable(
-                         key: const ValueKey(0),
+                         key: ValueKey(items![index]['_id']),
                          endActionPane: ActionPane(
                            motion: const ScrollMotion(),
-                           dismissible: DismissiblePane(onDismissed: () {}),
                            children: [
                              SlidableAction(
                                backgroundColor: Color(0xFFFE4A49),
